@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>导入体检</title>
+<link rel="preconnect" href="https://api.fontshare.com" crossorigin>
+<link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=satoshi@variable&display=swap">
+<link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+
+<header class="bar">
+  <div class="bar-l">
+    <div class="mark">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M4 12h9M4 17h14"/><circle cx="18.5" cy="12" r="2"/></svg>
+    </div>
+    <span class="app-name">导入体检</span>
+    <div class="vt-group" id="vtGroup">
+      <button class="vt active" data-view="raw">源数据</button>
+      <button class="vt" data-view="clean">清洗后</button>
+    </div>
+    <span class="file-meta" id="fileMeta"></span>
+  </div>
+
+  <div class="bar-r">
+    <button class="btn-ghost" id="btnSample">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3h18v18H3z"/><path d="M3 9h18M9 21V9"/></svg>
+      示例
+    </button>
+    <label class="btn-ghost" for="fileInput">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="M7 10l5-5 5 5M12 5v12"/></svg>
+      打开
+    </label>
+    <input type="file" id="fileInput" accept=".csv,text/csv" hidden>
+    <div class="exp" id="expWrap">
+      <button class="btn-primary" id="btnExport" disabled>
+        导出
+        <svg class="caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="exp-menu" id="expMenu">
+        <button data-exp="clean"><b>干净数据</b><span>clean_日期.csv</span></button>
+        <button data-exp="report"><b>问题报告</b><span>report_日期.csv</span></button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="workspace">
+
+  <section class="pane">
+    <div class="dropzone" id="dropzone">
+      <div class="dz-inner">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="M7 10l5-5 5 5M12 5v12"/></svg>
+        <b>拖入 CSV</b>
+      </div>
+    </div>
+
+    <div class="table-wrap" id="tableWrap" hidden>
+      <table id="grid"></table>
+    </div>
+  </section>
+
+  <aside class="side" id="side">
+
+    <div class="score-card">
+      <div class="score-head">
+        <span>体检</span>
+        <b id="scoreVal">—</b>
+      </div>
+      <div class="score-bar"><i id="scoreFill" style="width:0%"></i></div>
+      <p class="score-note" id="scoreNote"></p>
+    </div>
+
+    <div class="side-block">
+      <div class="sb-head">
+        <span id="issueHead">问题</span>
+        <em id="issueCount">0</em>
+      </div>
+      <ul class="issue-list" id="issueList">
+        <li class="issue-empty">—</li>
+      </ul>
+    </div>
+
+    <div class="side-block">
+      <div class="sb-head">
+        <span>字段</span>
+        <em id="mapCount">0 / 7</em>
+      </div>
+      <ul class="map-list" id="mapList">
+        <li class="issue-empty">—</li>
+      </ul>
+    </div>
+
+  </aside>
+</main>
+
+<div class="toast" id="toast"></div>
+
+<script src="js/app.js"></script>
+</body>
+</html>
