@@ -1,0 +1,198 @@
+{
+  "time": "2026-11-06T09:21:25.897Z",
+  "doctor": {
+    "checks": [
+      {
+        "name": "载入内置示例（11×7，含表头）",
+        "pass": true,
+        "detail": "元信息 11 × 7，数据 10 行"
+      },
+      {
+        "name": "检出问题清单",
+        "pass": true,
+        "detail": "5 条：门店重复 2 家 / 手机号 3 处 / 联系人 1 处 / 备注 1 处 / 手机号跨店重复 1 处"
+      },
+      {
+        "name": "列自动映射",
+        "pass": true,
+        "detail": "7 / 7"
+      },
+      {
+        "name": "格级标记",
+        "pass": true,
+        "detail": "红格 7，黄格 4"
+      },
+      {
+        "name": "导出按钮可用",
+        "pass": true,
+        "detail": "true"
+      },
+      {
+        "name": "点击问题定位格子",
+        "pass": true,
+        "detail": "outline=1"
+      },
+      {
+        "name": "切换到清洗后视图",
+        "pass": true,
+        "detail": "视图 clean，4 行，改过的格子 11"
+      },
+      {
+        "name": "导出干净数据 CSV",
+        "pass": true,
+        "detail": "5 行，表头「门店名称,联系人,手机号,地址,开业日期,营业面积,备注」"
+      },
+      {
+        "name": "导出问题报告 CSV",
+        "pass": true,
+        "detail": "11 行，首行「问题,说明,数量」"
+      },
+      {
+        "name": "上传 UTF-8 CSV",
+        "pass": true,
+        "detail": "样例数据.csv · 6 × 7，6 行，6 条问题"
+      },
+      {
+        "name": "GBK 编码自动识别",
+        "pass": true,
+        "detail": "gbk-sample.csv · 2 × 7，2 行，3 条问题，首段「#门店名称文本联系人文本手机号数字地址文本开业日期日期营业面积文本备注文本1杭州」"
+      }
+    ],
+    "errors": [],
+    "sample": {
+      "meta": "11 × 7",
+      "rows": 10,
+      "issues": 5,
+      "map": "7 / 7",
+      "bad": 7,
+      "warn": 4,
+      "issueTitles": [
+        "门店重复 2 家",
+        "手机号 3 处",
+        "联系人 1 处",
+        "备注 1 处",
+        "手机号跨店重复 1 处"
+      ],
+      "exportEnabled": true
+    },
+    "cleanLines": 5,
+    "reportLines": 11
+  },
+  "desk": {
+    "checks": [
+      {
+        "name": "四视图均可切换",
+        "pass": true,
+        "detail": "工单:✓ 看板:✓ 数据:✓ 客户:✓ / 列表 19 条，看板 19 卡，图表 55 节点，客户 6 家"
+      },
+      {
+        "name": "搜索过滤生效",
+        "pass": true,
+        "detail": "全部 19 条 → 搜「收银」1 条"
+      },
+      {
+        "name": "紧急筛选生效",
+        "pass": true,
+        "detail": "3 条"
+      },
+      {
+        "name": "工单详情抽屉",
+        "pass": true,
+        "detail": "正文 1198 字，轨迹 5 条，相关工单 3 条"
+      },
+      {
+        "name": "工单 → 客户下钻",
+        "pass": true,
+        "detail": "抽屉标题「收银端登录提示“网络异常”，84 家门店有一半打不开」→「临平康泰大药房」"
+      },
+      {
+        "name": "新工单相似检索",
+        "pass": true,
+        "detail": "2 条：历史相似：TK-2041 处理中 · 收银端登录提示“网络异常”，84 家（59%）TK-2029 已解决 · 医保结算偶发失败，重试两次才过（3%）"
+      },
+      {
+        "name": "创建工单并回到列表",
+        "pass": true,
+        "detail": "工单数 19 → 20，首条「收银端登录提示网络异常」"
+      },
+      {
+        "name": "看板拖拽改状态",
+        "pass": true,
+        "detail": "TK-2089: new → doing"
+      },
+      {
+        "name": "音效开关与主题切换",
+        "pass": true,
+        "detail": "音效关→开 true，主题 light→dark"
+      },
+      {
+        "name": "边缘流光（CSS 动画）",
+        "pass": true,
+        "detail": "动画 edge-run，canvas 已移除"
+      },
+      {
+        "name": "点击火花",
+        "pass": true,
+        "detail": "一次点击生成 8 个节点"
+      },
+      {
+        "name": "卡片指针聚光",
+        "pass": true,
+        "detail": "--mx = 0.0px"
+      }
+    ],
+    "errors": [],
+    "views": {
+      "inbox": {
+        "active": true,
+        "crumb": "工单",
+        "tickets": 19,
+        "cards": 0,
+        "svgNodes": 0,
+        "text": 4218
+      },
+      "board": {
+        "active": true,
+        "crumb": "看板",
+        "tickets": 0,
+        "cards": 19,
+        "svgNodes": 0,
+        "text": 1640
+      },
+      "insight": {
+        "active": true,
+        "crumb": "数据",
+        "tickets": 0,
+        "cards": 0,
+        "svgNodes": 55,
+        "text": 1092
+      },
+      "customers": {
+        "active": true,
+        "crumb": "客户",
+        "tickets": 0,
+        "cards": 6,
+        "svgNodes": 0,
+        "text": 1339
+      }
+    },
+    "similar": {
+      "visible": true,
+      "items": 2,
+      "text": "历史相似：TK-2041 处理中 · 收银端登录提示“网络异常”，84 家（59%）TK-2029 已解决 · 医保结算偶发失败，重试两次才过（3%）"
+    },
+    "drag": {
+      "done": true,
+      "id": "TK-2089",
+      "before": "new",
+      "after": "doing",
+      "targetStatus": "doing"
+    },
+    "fx": {
+      "ring": "edge-run",
+      "hasCanvas": false,
+      "props": true
+    }
+  },
+  "errors": []
+}
