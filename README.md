@@ -2,7 +2,7 @@
 
 客户提供的门店表在导入业务系统前，检查格式、重复与缺失，逐格标记问题，清洗后导出符合目标字段的标准数据。
 
-![源数据与问题清单](../docs/images/shot-doctor-1.png)
+![源数据与问题清单](docs/images/shot-doctor-1.png)
 
 ## 快速开始
 
@@ -17,9 +17,9 @@
 - **清洗归一**：归一化手机号、日期、面积、地址与门店名，剔除必填缺失行与重复行，并在清洗视图标出改动过的格子。
 - **导出**：干净数据与问题报告各一份，报告写明剔除行数与原因。
 
-![源数据格级标记](../docs/images/shot-doctor-3.png)
+![源数据格级标记](docs/images/shot-doctor-3.png)
 
-![清洗后数据](../docs/images/shot-doctor-2.png)
+![清洗后数据](docs/images/shot-doctor-2.png)
 
 ## 技术实现
 
